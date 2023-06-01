@@ -1,0 +1,47 @@
+.h {
+    text-align: center;
+    font-size: 24px;
+    margin-top: 10px;
+}
+.section{
+    margin-top: 50px;
+}
+body{
+    font-family: monospace;
+}
+.video, .email{
+    display: inline-block;
+    vertical-align: top;
+}
+.email{
+    height: 315px;
+    border: 9px solid skyblue;
+    box-sizing: border-box;
+    padding: 20px;
+    
+    border-radius: 20px;
+}
+.but{
+    margin-top: 35px;
+}
+.vod{
+    margin-top: 20px;
+}
+.vo{
+    text-align: center;
+}
+
+.text{
+    width: 300px;
+    height: 315px;
+    overflow: scroll;
+    margin-left: 20px;
+    font-size: 20px;
+
+}
+.ho{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}

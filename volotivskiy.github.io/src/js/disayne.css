@@ -1,0 +1,59 @@
+.box{
+    box-sizing: border-box;
+    width: 40%;
+    height: 150px;
+   
+    background-color: aqua;
+  
+    text-align: center;
+    border-top: 5px solid red;
+    border-right: 10px solid green;
+    border-bottom: 15px solid yellow;
+    border-left: 7px solid pink;
+    position: absolute;
+    overflow: hidden;
+    
+    
+
+}
+.two{
+    background-color: grey;
+  margin-left: 40%;
+  padding: 10px 20px 10px 20px;
+  width: 200px;
+  height: 200px;
+  overflow: scroll;
+  margin-top: -20px;
+  margin-bottom: 20px;
+}
+.top{
+    background-color: aquamarine;
+    width: 100%;
+    height: 40px;
+    margin-right: 0px;
+    display: inline-block;
+}
+.textone{
+    margin-top: 10px;
+    margin-left: 15%;
+}
+.texttwo{
+    text-align: center;
+    margin-top: -21px;
+}
+.textthree{
+    text-align: right;
+    margin-right: 15%;
+    margin-top: -21px;
+}
+.pasword{
+    text-align: right;
+    margin-right: 10%;
+
+}
+.imt{
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    text-align: right;
+}
