@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>  <style>
+        .inp{
+            height: 70px;
+            width: 350px;
+            margin-bottom: 20px;
+            margin-top: 10px;
+            font-size: 36px;
+            text-align: right;
+            border: none;
+            border-radius: 10px;
+        }
+        .button{
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: rgb(230, 230, 230);
+            border: none;
+            margin-right: 5px;
+            margin-left: 5px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-size: 30px;
+        }
+        .button:hover{
+            background-color: rgb(200, 200, 200);
+        }
+        .button:active{
+            background-color: rgb(180, 180, 180);
+        }
+        .cont{
+            margin-left: 50%;
+            margin-top: 200px;
+            transform: translate(-50%);
+            text-align: center;
+            background-color: rgb(30, 30, 30);
+            width: 450px;
+            padding: 20px 0px 20px 0px;
+            border-radius: 10px;
+            box-shadow: 0px 12px 50px 0px rgba(22, 66, 99, 0.28);
+        }
+        body{
+            background-color: rgb(10, 10, 10);
+        }
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <input class="inp" id="input" name="input" type="text"><br>
+        <button class="button" id="but" onclick="ac()" >AC</button class="button">
+        <button class="button" id="but" onclick="slo('**0.5')">\/`</button class="button">
+        <button class="button" id="but" onclick="slo('**2')">**2</button class="button">
+        <a href="https://t.me/reganme"><button class="button" >ТГ</button class="button"></a>
+        <br>
+        <button class="button" id="but" onclick="a(7)">7</button class="button">
+        <button class="button" id="but" onclick="a(8)">8</button class="button">
+        <button class="button" id="but" onclick="a(9)">9</button class="button">
+        <button class="button" id="but" onclick="b('+')">+</button class="button">
+        <br>        
+        <button class="button" id="but" onclick="a(4)">4</button class="button">
+        <button class="button" id="but" onclick="a(5)">5</button class="button">
+        <button class="button" id="but" onclick="a(6)">6</button class="button">
+        <button class="button" id="but" onclick="b('-')">-</button class="button">
+        <br>
+        <button class="button" id="but" onclick="a(1)">1</button class="button">
+        <button class="button" id="but" onclick="a(2)">2</button class="button">
+        <button class="button" id="but" onclick="a(3)">3</button class="button">
+        <button class="button" id="but" onclick="b('*')">*</button class="button">
+        <br>
+        <button class="button" id="but" onclick="toch()">.</button class="button">
+        <button class="button" id="but" onclick="nul()">0</button class="button">
+        <button class="button" id="but" onclick="ravno()">=</button class="button">
+        <button class="button" id="but" onclick="b('/')">/</button class="button">
+    </div>
+<script>
+    let d = ''
+    let e =''
+    function slo(x){
+        if(document.getElementById('input').value!='' && document.getElementById('input').value!='+' && document.getElementById('input').value!='-' && document.getElementById('input').value!='*' & document.getElementById('input').value!='/' ){
+            document.getElementById('input').value=document.getElementById('input').value+x
+            d+=x   
+        } 
+    }
+    function toch(){
+        if(document.getElementById('input').value=='0'){
+            document.getElementById('input').value+='.'
+            d+='.'
+        }
+        
+    }
+    function nul(){
+        if(document.getElementById('input').value==''|| document.getElementById('input').value!='0'){
+            document.getElementById('input').value+='0'
+            d+='0'
+        }
+    }
+    function a(x){
+        if(document.getElementById('input').value=='+' || document.getElementById('input').value=='-' || document.getElementById('input').value=='*' || document.getElementById('input').value=='/' ){
+            document.getElementById('input').value=''    
+        }
+        d+=x
+        document.getElementById('input').value+=x
+    }
+    function ravno(){
+        if (d!=''){
+          document.getElementById('input').value=eval(d)
+        }
+    }
+    function b(x){
+        
+        if (eval(document.getElementById('input').value)>0){
+         d+=x
+         document.getElementById('input').value = x 
+        }
+    }
+    function ac(){
+        d = ''
+        document.getElementById('input').value='' 
+    }
+    console.log(document.URL)
+</script>
+        
+</body>
+</html>
