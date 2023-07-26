@@ -1,0 +1,455 @@
+@button-clr: green;
+@icons-clr: orange;
+@text-clr: black;
+@fon-clr: white;
+.gipper{
+    .gip {
+        color: @text-clr; 
+        position: relative;
+        cursor: pointer;
+        text-decoration: none; 
+    }
+    .gip:after {
+        content: "";
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: -3px;
+        width: 0;
+        height: 2px; 
+        background-color: black; 
+        transition: width 0.5s; 
+    }
+    
+    .gip:hover:after {
+        content: "";
+        width: 100%;
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: -3px;
+        height: 2px; 
+        background-color: red; 
+        transition: width 0.5s;  
+    }
+}
+input, button, a{
+    outline: none;
+}
+a:hover{
+    text-decoration: none;
+    color: @icons-clr;
+}
+.main{
+    height: 750px;
+    background: url(1614604199_77-p-izobrazhenie-s-belim-fonom-96.jpg); 
+		background-attachment: fixed; 
+		background-repeat: repeat-x;
+    &-two{
+        margin-top: 30px;
+    } 
+        
+ }
+.row{
+    padding-top: 20px;
+    height: 101px;
+}
+.bt{
+    background-color: @icons-clr;
+    color: @fon-clr;
+    border: 0px;
+    border-radius: 8px;
+    padding: 8px 30px;
+    transition: all 0.2s;
+    &:hover{
+        cursor: pointer;
+        background-color: darken(@icons-clr, 5%);
+
+    }
+}
+.num{
+    font-size: 20px;
+    padding-top: 15px;
+    text-align: right;
+    text-decoration: none;
+    display: inline-block;
+    color: @text-clr;
+    text-align: right;
+}
+.but{
+    padding-top: 10px;
+    text-align: right;
+}
+.bodyone{
+    margin-top: 80px;
+   
+}
+.textb{
+    &-p{
+        font-size: 24px;
+        margin-top: 30px;
+    }
+    &-o{
+        background-color: @button-clr;
+        display: inline-block;
+        padding: 20px 20px 25px 20px;
+        font-size: 20px;
+        margin-top: 50px;
+        border-radius: 4px;
+        transition: 0.3s;
+        text-align: center;
+        color: @fon-clr;
+        
+        &-oneb{
+            font-size: 30px;
+        }
+        &:hover{
+            background-color: @icons-clr;
+            color: @fon-clr;
+        }
+    }
+    &-x{
+        font-size: 24px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+}
+.zayav{
+    border: 3px solid @icons-clr;
+    border-radius: 10px;
+    background-color: #fff;
+    height: 370px;
+    width: 300px;
+
+    &-p{
+        margin-top: 20px;
+        font-size: 18px;
+        color: black;
+    }
+    &-i{
+        height: 45px;
+        border: 1px solid gainsboro;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+    &-y{
+        height: 45px;
+        border: 1px solid gainsboro;
+        border-radius: 5px;
+        margin-top: 20px;
+    }
+    &-b{
+        height: 55px;
+        border: 0px;
+        background-color: @icons-clr;
+        color: @fon-clr;
+        border-radius: 5px;
+        margin-top: 30px; 
+        .bt;
+    }
+    &-t{
+        margin-top: 13px;
+        color: gainsboro;
+    }
+}
+.lab{
+    right: 50%;
+    transform: translateX(-50%);
+}
+
+.gip {
+	color: @text-clr; 
+    position: relative;
+    cursor: pointer;
+    text-decoration: none; 
+}
+.gip:after {
+	content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px; 
+    background-color: black; 
+    transition: width 0.5s; 
+}
+
+.gip:hover:after {
+	content: "";
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 2px; 
+    background-color: red; 
+    transition: width 0.5s;  
+}
+
+
+/*Вторая часть*/
+
+.maintwo{
+    margin-top: 50px;
+}
+.slid{
+    margin-bottom: 50px;
+    &-h{
+        font-size: 30px;
+    }
+
+}
+.slider{
+    text-align: center;
+    &-block{
+        &-im{
+            display: block;
+            margin: auto;
+            margin-bottom: 20px;
+        }         
+    }
+}
+.txta{
+    border: 2px solid @button-clr;
+    margin-top: 0px;
+    &-q{
+        padding: 10px 5px 0px 10px;
+    }
+}
+.prev{
+    width: 20px;
+    height: 20px;
+    background-color: aqua;
+}
+.popup{
+    text-align: center;
+    width: 400px;
+    position: fixed;
+    top: 10%;
+    left: 1%;
+    background-color: @fon-clr;
+    padding: 40px;
+    display: none;
+    &-inp{
+        margin: auto;
+        margin-top: 20px;
+        margin-right: 20px;
+    }
+    &-bt{
+        right: 100%;
+    }
+}
+
+@media (max-width: 767px){
+    .textb{
+        text-align: center;
+    }
+    .main{
+        background-position: top center;
+    }
+
+}
+
+.mainfour{
+    background-color: @button-clr;
+    height: 650px;
+    
+}
+
+
+.bu{
+    font-size: 20px;
+    height: 55px;
+    border: 0px;
+    background-color: @icons-clr;
+    color: @fon-clr;
+    border-radius: 5px;
+    .bt;
+}
+.thr{
+    &-oknoq{
+        background-color: @fon-clr;
+        box-shadow: 0px 15px 21px 10px rgba(0, 0, 0, 0.17);
+        margin-top: 30px;
+    }
+    &-oknow{
+        background-color: @fon-clr;
+        box-shadow: 0px 15px 21px 10px rgba(0, 0, 0, 0.17);
+        margin-top: 30px;
+    }
+    &-oknoe{
+        background-color: @fon-clr;
+        box-shadow: 0px 15px 21px 10px rgba(0, 0, 0, 0.17);
+        margin-top: 30px;
+    }
+}
+.tyu{
+    margin-top: 10px;
+}
+.tyi{
+    padding-top: 10px;
+}
+.q{
+    margin-bottom: 30px;
+    margin-top: 60px;
+}
+.cena{
+    color: @fon-clr;
+}
+.list{
+    list-style: none;
+    padding: 0px;
+}
+.sli{
+    border-top: 10px solid @fon-clr;
+    border-left: 30px solid @fon-clr;
+    border-right: 30px solid @fon-clr;
+    border-top: 10px solid @fon-clr;
+    box-shadow: 0px 15px 21px 10px rgba(0, 0, 0, 0.17);
+}
+.artyri{
+    display: inline-block;
+}
+.artyrp{
+    display: inline-block;
+}
+.sli{
+    &-otzq{
+        margin-bottom: 300px;
+    }
+    &-otzw{
+        margin-bottom: 300px;
+    }
+    &-otze{
+        margin-bottom: 300px;
+    }
+}
+.tx{
+    border: 2px solid @button-clr;
+}
+.otzivi{
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.six{
+    background: url(blue-technology-circuitry-abstract-digital-art-1403867.jpg);
+    height: 700px;
+    &-head{
+        margin-top: 30px;
+        color: @fon-clr;
+    }
+    &-block{
+        background-color: @fon-clr;
+        padding-top: 14px;
+        margin-left: 53px;
+        margin-bottom: 20px;
+        box-shadow: 0px 15px 21px 10px rgba(0, 0, 0, 0.17);
+        border-radius: 10px;
+    }
+    &-h{
+        margin-top: 7px;
+    }
+    &-s{padding-top: 20px;}
+}
+:root {
+    --light: #d8dbe0;
+    --dark: #28292c;
+    --link: rgb(27, 129, 112);
+    --link-hover: rgb(24, 94, 82);
+  }
+  
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  .toggle-switch {
+    position: relative;
+    width: 200px;
+  }
+  
+  label {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    background-color: var(--dark);
+    border-radius: 50px;
+    cursor: pointer;
+  }
+  
+  input {
+    position: absolute;
+    display: none;
+  }
+  
+  .slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    transition: 0.3s;
+  }
+  
+  input:checked ~ .slider {
+    background-color: var(--light);
+  }
+  
+  .slider::before {
+    content: "";
+    position: absolute;
+    top: 13px;
+    left: 16px;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    box-shadow: inset 28px -4px 0px 0px var(--light);
+    background-color: var(--dark);
+    transition: 0.3s;
+  }
+  
+  input:checked ~ .slider::before {
+    transform: translateX(95px);
+    background-color: var(--dark);
+    box-shadow: none;
+  }
+@media(max-width: 991px){
+    .mainfour{
+        height: 1650px;
+    }
+    .sli{
+        &-otze{
+            margin-bottom: 650px;
+        }
+    }
+    .otz-text{
+        padding-top: 10px;
+    }
+    .six{
+        height: 890px;
+        &-block{
+            margin-left: 0px;
+        }
+    }
+}
+@media(max-width: 767px){
+    .main{
+        height: 1050px;
+    }
+    .thr-oknoq{
+        margin-top: 50px;
+    }
+    .sli{
+        &-otze{
+            margin-bottom: 600px;
+        }
+        &-vi{
+            height: 280px;
+        }
+    }
+    .six{
+        height: 1000px;
+    }
+}
+
+
