@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+    <style>
+        body{
+           margin: 0%;
+        }
+        .body{
+            width: 50%;
+            right: 50%;
+            transform: translateX(50%);
+            background-color: #eeeeee;
+            height: 959px;
+        }
+        .verh{
+            height: 400px;
+            background-color: #eeeeee;
+        }
+        .box{
+            width: 150px;
+            height: 150px;
+            background-color: white;
+            margin-left: 50%;
+            transform: translate(-50%, 80%);
+            box-shadow: 0px 0px 50px 0px;
+            
+        }
+        .input{
+            width: 200px;
+        }
+        .p1{
+            display: inline-block;
+            transform: translateY(-15%);
+        }
+        .niz{
+            text-align: center;
+        }
+        .zvet{
+            display: inline-block;
+            text-align: center;
+            margin-right: 25px;
+        }
+        .two{
+            margin-right: 0px;
+        }
+        .zvet-p{
+            margin-top: 5px;
+        }
+        .zvet-clr{
+            border: none;
+            width: 30px;
+            height: 34px;
+            padding: 0px;
+            margin: 0%;
+        }
+        .btn{
+            border: 0px;
+            width: 120px;
+            height: 35px;
+            background-color: orange;
+            color: white;
+            font-weight: 700;
+            padding: 10px;
+            border-radius: 20px;
+        }
+        .btn:hover{
+            width: 150px;
+            height: 50px;
+            border-radius: 30px;
+            transform: translateY(-16%);
+            transition: 0.3s;   
+        }
+        .btn:active{
+            background-color: rgb(207, 135, 0);
+        }
+        @media(max-width: 900px){
+            .body{
+                width: 100%;
+                transform: translate(0px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="body">
+        <div class="verh" id="verh">
+            <div class="box" id="box"></div>
+        </div>
+        <div class="niz">
+            <div class="i">
+                <strong>
+                    <p class="p">moveX</p>
+                </strong>
+                <input type="range" class="input" min="-50" max="50" id="inp1">
+                <p class="p1" id="p1">0px</p>
+            </div>
+            <div class="i">
+                <strong>
+                    <p class="p">moveY</p>
+                </strong>
+                <input type="range" class="input" min="-50" max="50" id="inp2">
+                <p class="p1" id="p2">0px</p>
+            </div>
+            <div class="i">
+                <strong>
+                    <p class="p">расплытие</p>
+                </strong>
+                <input type="range" class="input" min="0" max="100" id="inp3">
+                <p class="p1" id="p3">50px</p>
+            </div>
+            <div class="i">
+                <strong>
+                    <p class="p">box+</p>
+                </strong>
+                <input type="range" class="input" min="-50" max="50" id="inp4">
+                <p class="p1" id="p4">0px</p>
+            </div>
+
+            <div class="zvet">
+                <input type="color" class="zvet-clr" id="color1" value="#ffffff">
+                <p class="zvet-p">box</p>
+            </div>
+            <div class="zvet">
+                <input type="color" class="zvet-clr" id="color2">
+                <p class="zvet-p">box-shadow</p>
+            </div>
+            <div class="zvet two">
+                <input type="color" class="zvet-clr" id="color3" value="#eeeeee">
+                <p class="zvet-p">фон</p>
+            </div><br>
+            <button class="btn" id="btn">Изменить цвет</button>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $('.input').change(function(){
+                $('#box').css('box-shadow',$('#inp1').val()+'px '+$('#inp2').val()+ 'px ' +$('#inp3').val()+ 'px '+ $('#inp4').val()+ 'px ')
+                $('#p1').text($('#inp1').val()+'px')
+                $('#p2').text($('#inp2').val()+'px')
+                $('#p3').text($('#inp3').val()+'px')
+                $('#p4').text($('#inp4').val()+'px')
+            })
+            $('#btn').click(function(){
+                $('#box').css('background-color', $('#color1').val())
+                $('#verh').css('background-color', $('#color3').val())
+                $('#box').css('box-shadow',$('#inp1').val()+'px '+$('#inp2').val()+ 'px ' +$('#inp3').val()+ 'px '+ $('#inp4').val()+ 'px '+ $('#color2').val())
+
+            })
+            }       
+        )
+    </script>
+</body>
+</html>
